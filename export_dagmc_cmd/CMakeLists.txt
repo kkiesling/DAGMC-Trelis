@@ -29,6 +29,9 @@ set(SRC
     DAGMCExportCommand.cpp
     DAGMCExportCommand.hpp)
 
-add_library(dagmc_export_plugin MODULE ${SRC})
+#add_library(dagmc_export_plugin MODULE ${SRC})
+
+add_library(dagmc_export_plugin STATIC ${SRC})
+
 #target_link_libraries(dagmc_export_plugin cubiti cubit_util cubit_geom ${MOAB_LIBRARIES})
 target_link_libraries(dagmc_export_plugin cubiti cubit_util cubit_geom z /home/kkiesling/Pokeball/install/hdf5/lib/libhdf5.so /home/kkiesling/Pokeball/install/moab/lib/libMOAB.so)
